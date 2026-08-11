@@ -162,4 +162,4 @@ Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 ---
 
 ## Contatti
-[[tommifunky](https://www.instagram.com/tommifunky/)]
+[tommifunky](https://www.instagram.com/tommifunky/)
