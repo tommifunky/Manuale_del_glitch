@@ -3,8 +3,8 @@
 Repository ufficiale del progetto di tesi *L'errore come strumento*,
 Bachelor of Arts in Comunicazione visiva, SUPSI Mendrisio (2025–2026).
 
-**Studente:** Tommaso Stanga
-**Relatore:** Andreas Gysin
+Studente: Tommaso Stanga
+Relatore: Andreas Gysin
 
 ---
 
@@ -61,23 +61,21 @@ Gli script contenuti nella cartella `script/` permettono di sperimentare diverse
 
 ### Dipendenze Python
 
-Installare le dipendenze Python con:
-
 ```bash
 pip install numpy pillow
 ```
 
 ### SoX
 
-Gli script che utilizzano il databending audio richiedono **SoX**.
+Gli script che utilizzano il databending audio richiedono SoX.
 
-#### macOS
+macOS:
 
 ```bash
 brew install sox
 ```
 
-#### Linux
+Linux:
 
 ```bash
 sudo apt install sox
@@ -117,16 +115,16 @@ python3 nome_script.py --help
 
 ## Dataset
 
-La cartella `dataset/` contiene i file utilizzati per gli esperimenti del progetto:
+La cartella `dataset/` contiene i file utilizzati per gli esperimenti del progetto.
 
-* **Immagini raster**
-* **Sequenze video**
-* **Modelli 3D**
-* **Font**
+* Immagini raster
+* Sequenze video
+* Modelli 3D
+* Font
 
-Il dataset comprende, tra gli altri:
+Tra i file utilizzati:
 
-* classic test images (USC-SIPI Image Database)
+* Classic Test Images (USC-SIPI Image Database)
 * Akiyo
 * Coastguard
 * Foreman
@@ -142,9 +140,7 @@ Il dataset comprende, tra gli altri:
 
 ## Schede
 
-La cartella `schede/` contiene le singole schede delle tecniche di glitch, preparate per essere consultate, estratte e stampate.
-
-Le schede documentano le procedure operative e i parametri utilizzati per ottenere i diversi risultati.
+La cartella `schede/` contiene le singole schede delle tecniche di glitch in formato PDF, pensate per essere consultate, estratte e stampate.
 
 ---
 
@@ -152,14 +148,14 @@ Le schede documentano le procedure operative e i parametri utilizzati per ottene
 
 La cartella `procedure/` contiene la documentazione delle procedure utilizzate per la manipolazione dei diversi formati di file.
 
-Le procedure descrivono i passaggi necessari per replicare gli esperimenti e costituiscono la base metodologica delle tecniche raccolte nel progetto.
+Le procedure descrivono i passaggi necessari per replicare gli esperimenti e ottenere i diversi risultati.
 
 ---
 
 ## Licenza
 
 Questo progetto è rilasciato sotto licenza
-**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 
 © Tommaso Stanga, 2026
 
@@ -174,4 +170,4 @@ Questo progetto è rilasciato sotto licenza
 
 ## Contatti
 
-**Tommaso Stanga** — [inserisci email]
+Tommaso Stanga — [inserisci email]
