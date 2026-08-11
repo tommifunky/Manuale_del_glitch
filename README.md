@@ -1,59 +1,59 @@
-# Manuale del glitch - Repository
+# Manuale del glitch — Repository
 
-Repository ufficiale del progetto di tesi *L'errore come strumento*, Bachelor of Arts in Comunicazione visiva, SUPSI Mendrisio (2025-2026).
+Repository ufficiale del progetto di tesi *L'errore come strumento*,
+Bachelor of Arts in Comunicazione visiva, SUPSI Mendrisio (2025–2026).
 
-**Studente:** Tommaso Stanga  
+**Studente:** Tommaso Stanga
+**Relatore:** Andreas Gysin
 
 ---
 
 ## Contenuto della repository
-Manuale_del_glitch/
-├── dataset/ # Immagini, video, modelli e font utilizzati
-├── script/ # Script Python per la manipolazione dei file
-│ ├── bmp/ # Script per il formato BMP
-│ ├── jpeg/ # Script per il formato JPEG
-│ └── gif/ # Script per il formato GIF
-├── manuale/ # File sorgente del manuale
-│ ├── dossier.pdf # Tra caso, deviazione e controllo
-│ └── manuale.pdf # Manuale del glitch
-├── schede/ # Schede singole in PDF (estrai e stampa)
-└── README.md
 
-text
+```text
+Manuale_del_glitch/
+├── dataset/       # Immagini, video, modelli 3D e font utilizzati
+├── script/        # Script per la manipolazione dei file
+├── schede/        # Schede delle procedure in PDF
+├── procedure/     # Procedure e documentazione delle tecniche
+└── README.md
+```
 
 ---
 
 ## Script disponibili
 
+Gli script contenuti nella cartella `script/` permettono di sperimentare diverse tecniche di manipolazione e databending.
+
 ### BMP
 
-| Script | Descrizione |
-|--------|-------------|
-| `prova.py` | Primi esperimenti: overlay, splicing, reverse, delay |
-| `swap_header.py` | Scambia header tra immagini (anche ruotate) |
-| `soloheader.py` | Modifica solo larghezza e altezza del BMP |
-| `x_bmp_hexfiend.py` | Modifica pixel (sostituzione, eliminazione, inserimento) e header |
-| `a_py.py` | Databending con SoX (eco, riverbero, phaser, distorsione) |
-| `echo.py` | Effetto eco (tutti i parametri di Audacity) |
-| `phaser.py` | Effetto phaser (tutti i parametri di Audacity) |
-| `reverbero.py` | Effetto riverbero (tutti i parametri di Audacity) |
-| `distorsioni.py` | Distorsione, phaser, tremolo, wahwah, vocoder |
-| `amp_norm.py` | Amplifica e normalizza (tutti i parametri di Audacity) |
+| Script              | Descrizione                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| `prova.py`          | Primi esperimenti: overlay, splicing, reverse, delay             |
+| `swap_header.py`    | Scambia header tra immagini, anche ruotate                       |
+| `soloheader.py`     | Modifica larghezza e altezza del BMP                             |
+| `x_bmp_hexfiend.py` | Modifica i dati dei pixel e l'header tramite operazioni sui byte |
+| `a_py.py`           | Databending con SoX: eco, riverbero, phaser e distorsione        |
+| `echo.py`           | Applica l'effetto eco                                            |
+| `phaser.py`         | Applica l'effetto phaser                                         |
+| `reverbero.py`      | Applica l'effetto riverbero                                      |
+| `distorsioni.py`    | Applica distorsione, phaser, tremolo, wahwah e vocoder           |
+| `amp_norm.py`       | Amplifica e normalizza il segnale                                |
 
 ### JPEG
 
-| Script | Descrizione |
-|--------|-------------|
-| `x_sos.py` | Modifica segmento SOS (dati compressi) |
-| `x_sof.py` | Modifica segmento SOF (dimensioni, componenti, precisione) |
-| `x_dqt.py` | Modifica tabelle di quantizzazione DQT |
-| `x_dht.py` | Modifica tabelle Huffman DHT |
+| Script     | Descrizione                                                   |
+| ---------- | ------------------------------------------------------------- |
+| `x_sos.py` | Modifica il segmento SOS e i dati compressi                   |
+| `x_sof.py` | Modifica il segmento SOF: dimensioni, componenti e precisione |
+| `x_dqt.py` | Modifica le tabelle di quantizzazione DQT                     |
+| `x_dht.py` | Modifica le tabelle Huffman DHT                               |
 
 ### GIF
 
-| Script | Descrizione |
-|--------|-------------|
-| `x_gif.py` | Modifica Global Color Table e Image Data |
+| Script     | Descrizione                                     |
+| ---------- | ----------------------------------------------- |
+| `x_gif.py` | Modifica la Global Color Table e gli Image Data |
 
 ---
 
@@ -61,59 +61,117 @@ text
 
 ### Dipendenze Python
 
+Installare le dipendenze Python con:
+
 ```bash
 pip install numpy pillow
-SoX (per il databending)
-macOS:
+```
 
-bash
+### SoX
+
+Gli script che utilizzano il databending audio richiedono **SoX**.
+
+#### macOS
+
+```bash
 brew install sox
-Linux:
+```
 
-bash
+#### Linux
+
+```bash
 sudo apt install sox
-Utilizzo
-Script Python
-bash
-# Esempio: BMP glitcher con SoX
+```
+
+---
+
+## Utilizzo
+
+Gli script possono essere eseguiti da terminale.
+
+Esempio: databending BMP con SoX:
+
+```bash
 python3 a_py.py -i ./input -o ./output
+```
 
-# Esempio: Modifica header BMP
+Esempio: modifica dell'header BMP:
+
+```bash
 python3 soloheader.py -i input.bmp -o output/ -n 10
+```
 
-# Esempio: Modifica SOS JPEG
+Esempio: modifica del segmento SOS JPEG:
+
+```bash
 python3 x_sos.py -i ./input -o ./output
-Opzioni comuni
-Opzione	Descrizione
--i, --input-dir	Directory contenente i file da elaborare
--o, --output-dir	Directory di output
--n, --random	Numero di varianti casuali
-Per i dettagli delle opzioni specifiche di ogni script:
+```
 
-bash
+Per visualizzare le opzioni disponibili per ciascuno script:
+
+```bash
 python3 nome_script.py --help
-Dataset
-Le immagini, sequenze video, modelli 3D e font utilizzati sono nella cartella dataset/:
+```
 
-Immagini raster: classic test images (USC-SIPI Image Database)
+---
 
-Sequenze video: Akiyo, Coastguard, Foreman, Stefan
+## Dataset
 
-Modelli 3D: Bunny, Armadillo, Utah Teapot, Suzanne
+La cartella `dataset/` contiene i file utilizzati per gli esperimenti del progetto:
 
-Caratteri: Arial, Times New Roman
+* **Immagini raster**
+* **Sequenze video**
+* **Modelli 3D**
+* **Font**
 
-Licenza
-Questo progetto è rilasciato sotto licenza Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+Il dataset comprende, tra gli altri:
+
+* classic test images (USC-SIPI Image Database)
+* Akiyo
+* Coastguard
+* Foreman
+* Stefan
+* Bunny
+* Armadillo
+* Utah Teapot
+* Suzanne
+* Arial
+* Times New Roman
+
+---
+
+## Schede
+
+La cartella `schede/` contiene le singole schede delle tecniche di glitch, preparate per essere consultate, estratte e stampate.
+
+Le schede documentano le procedure operative e i parametri utilizzati per ottenere i diversi risultati.
+
+---
+
+## Procedure
+
+La cartella `procedure/` contiene la documentazione delle procedure utilizzate per la manipolazione dei diversi formati di file.
+
+Le procedure descrivono i passaggi necessari per replicare gli esperimenti e costituiscono la base metodologica delle tecniche raccolte nel progetto.
+
+---
+
+## Licenza
+
+Questo progetto è rilasciato sotto licenza
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
 
 © Tommaso Stanga, 2026
 
-Collegamenti
-Repository GitHub
+---
 
-SUPSI Mendrisio
+## Collegamenti
 
-Contatti
-Tommaso Stanga - [inserisci email]
+* [Repository GitHub](https://github.com/tommifunky/Manuale_del_glitch/)
+* [SUPSI Mendrisio](https://www.supsi.ch/mendrisio)
 
-Questo README è provvisorio e verrà aggiornato con la consegna finale.
+---
+
+## Contatti
+
+**Tommaso Stanga** — [inserisci email]
