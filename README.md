@@ -161,13 +161,5 @@ Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 
 ---
 
-## Collegamenti
-
-* [Repository GitHub](https://github.com/tommifunky/Manuale_del_glitch/)
-* [SUPSI Mendrisio](https://www.supsi.ch/mendrisio)
-
----
-
 ## Contatti
-
-Tommaso Stanga — [inserisci email]
+[[tommifunky](https://www.instagram.com/tommifunky/)]
