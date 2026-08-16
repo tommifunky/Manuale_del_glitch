@@ -11,12 +11,12 @@ Relatore: Andreas Gysin
 ## Contenuto della repository
 
 ```text
-glitch/
-├── dataset/                     # Immagini, video, modelli 3D e font utilizzati
-│   ├── immagini/                # BMP, JPEG, GIF, TIFF
-│   ├── immagini_in_movimento/   # Akiyo, Coastguard, Foreman, Stefan
-│   ├── caratteri_tipografici/   # Arial.ttf, Times_New_Roman.ttf
-│   └── modelli_tridimensionali/ # Bunny.obj, Armadillo.obj, Teapot.obj, Suzanne.obj
+glitch/                          # Immagini, video, modelli 3D e font utilizzati
+├── dataset/                    
+│   ├── immagini/               
+│   ├── immagini_in_movimento/  
+│   ├── caratteri_tipografici/   
+│   └── modelli_tridimensionali/ 
 │
 ├── formati/                     # Schede tecniche dei formati digitali (PDF)
 │   ├── BMP.pdf
@@ -97,7 +97,7 @@ glitch/
 │   ├── giflab/
 │   │   ├── N3_GIFlab.pdf
 │   │   └── output/
-│   └── python_scripts/          # Script Python legacy
+│   └── python_scripts/          # Script Python utili
 │
 └── README.md
 ```
@@ -241,20 +241,6 @@ La cartella `dataset/` contiene i file utilizzati per gli esperimenti del proget
 * Sequenze video
 * Modelli 3D
 * Font
-
-Tra i file utilizzati:
-
-* Classic Test Images (USC-SIPI Image Database)
-* Akiyo
-* Coastguard
-* Foreman
-* Stefan
-* Bunny
-* Armadillo
-* Utah Teapot
-* Suzanne
-* Arial
-* Times New Roman
 
 ---
 
