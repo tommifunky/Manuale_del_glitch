@@ -1,6 +1,6 @@
 # Manuale del *glitch* digitale
 
-Repository ufficiale del progetto di tesi *L'errore come strumento, Manuale del glitch digitale*,
+Repository ufficiale del progetto di tesi *L'errore come strumento, Manuale del glitch digitale*,<br>
 Bachelor of Arts in Comunicazione visiva, SUPSI Mendrisio (2025–2026).
 
 Studente: Tommaso Stanga  
