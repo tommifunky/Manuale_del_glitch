@@ -3,7 +3,7 @@
 Repository ufficiale del progetto di tesi *L'errore come strumento*,
 Bachelor of Arts in Comunicazione visiva, SUPSI Mendrisio (2025–2026).
 
-Studente: Tommaso Stanga<br>
+Studente: Tommaso Stanga  
 Relatore: Andreas Gysin
 
 ---
@@ -11,11 +11,94 @@ Relatore: Andreas Gysin
 ## Contenuto della repository
 
 ```text
-Manuale_del_glitch/
-├── dataset/       # Immagini, video, modelli 3D e font utilizzati
-├── script/        # Script per la manipolazione dei file
-├── schede/        # Schede delle procedure in PDF
-├── procedure/     # Procedure e documentazione delle tecniche
+glitch/
+├── dataset/                     # Immagini, video, modelli 3D e font utilizzati
+│   ├── immagini/                # BMP, JPEG, GIF, TIFF
+│   ├── immagini_in_movimento/   # Akiyo, Coastguard, Foreman, Stefan
+│   ├── caratteri_tipografici/   # Arial.ttf, Times_New_Roman.ttf
+│   └── modelli_tridimensionali/ # Bunny.obj, Armadillo.obj, Teapot.obj, Suzanne.obj
+│
+├── formati/                     # Schede tecniche dei formati digitali (PDF)
+│   ├── BMP.pdf
+│   ├── GIF.pdf
+│   ├── JPEG.pdf
+│   ├── OBJ.pdf
+│   ├── TIFF.pdf
+│   └── TTF.pdf
+│
+├── strumenti/                   # Schede degli strumenti utilizzati (PDF)
+│   ├── Anteprima.pdf
+│   ├── Audacity.pdf
+│   ├── GIMP.pdf
+│   ├── Hex_Fiend.pdf
+│   └── TextEdit.pdf
+│
+├── procedure_generali/          # Procedure generali per l'uso degli strumenti (PDF)
+│   ├── G1_Aprire_un_file_con_Hex_Fiend.pdf
+│   ├── G2_Salvare_un_file_con_Hex_Fiend.pdf
+│   ├── G3_Cercare_byte_con_Hex_Fiend.pdf
+│   ├── G4_Raggiungere_un_offset_con_Hex_Fiend.pdf
+│   ├── G5_Interpretare_valori_esadecimali_con_Hex_Fiend.pdf
+│   ├── G6_Convertire_un_immagine_con_GIMP.pdf
+│   ├── G7_Aprire_un_file_con_Audacity.pdf
+│   ├── G8_Salvare_un_file_con_Audacity.pdf
+│   ├── G9_Selezionare_i_dati_con_Audacity.pdf
+│   ├── G10_Dividere_una_traccia_con_Audacity.pdf
+│   ├── G11_Applicare_effetti_con_Audacity.pdf
+│   ├── G12_Aprire_un_immagine_con_Anteprima.pdf
+│   ├── G13_Duplicare_e_salvare_un_immagine_con_Anteprima.pdf
+│   ├── G14_Aprire_un_file_con_TextEdit.pdf
+│   ├── G15_Salvare_un_file_con_TextEdit.pdf
+│   ├── G16_Cercare_elementi_con_TextEdit.pdf
+│   ├── G17_Sostituire_valori_con_TextEdit.pdf
+│   └── G18_Avviare_script_personalizzati.pdf
+│
+├── glitch_bmp/                  # Procedure per il glitch del formato BMP
+│   ├── H1_Alterazione_delle_coordinate_spaziali/
+│   │   ├── H1_Alterazione_delle_coordinate_spaziali.pdf
+│   │   └── output/
+│   ├── H2_Alterazione_della_profondità_cromatica/
+│   ├── H3_Alterazione_dei_dati_pixel/
+│   ├── H4_Databending_BMP/
+│   ├── H5_Fusione_dei_dati_BMP/
+│   └── H6_Scambio_header_BMP/
+│
+├── glitch_jpeg/                 # Procedure per il glitch del formato JPEG
+│   ├── I1_Alterazione_del_segmento_SOS/
+│   ├── I2_Alterazione_delle_dimensioni_SOF/
+│   ├── I3_Alterazione_dei_componenti_colore_SOF/
+│   ├── I4_Alterazione_del_segmento_DQT/
+│   └── I5_Alterazione_del_segmento_DHT/
+│
+├── glitch_gif/                  # Procedure per il glitch del formato GIF
+│   ├── K1_Alterazione_della_global_color_table/
+│   └── K2_Alterazione_degli_image_data/
+│
+├── glitch_tiff/                 # Procedure per il glitch del formato TIFF
+│   ├── L1_Alterazione_dei_dati_immagine/
+│   ├── L2_Alterazione_delle_dimensioni_immagine/
+│   └── L3_Databending_TIFF/
+│
+├── glitch_obj/                  # Procedure per il glitch del formato OBJ
+│   ├── J1_Dislocazione_dei_vertici/
+│   └── J2_Alterazione_delle_facce/
+│
+├── glitch_ttf/                  # Procedure per il glitch del formato TTF
+│   ├── M1_Alterazione_della_struttura_TTF/
+│   └── M2_Databending_tipografico/
+│
+├── script/                      # Script per automatizzare le alterazioni
+│   ├── bmplab/
+│   │   ├── N1_BMPlab.pdf
+│   │   └── output/
+│   ├── jpeglab/
+│   │   ├── N2_JPEGlab.pdf
+│   │   └── output/
+│   ├── giflab/
+│   │   ├── N3_GIFlab.pdf
+│   │   └── output/
+│   └── python_scripts/          # Script Python legacy
+│
 └── README.md
 ```
 
@@ -23,9 +106,35 @@ Manuale_del_glitch/
 
 ## Script disponibili
 
-Gli script contenuti nella cartella `script/` permettono di sperimentare diverse tecniche di manipolazione e databending.
+### BMPlab (Swift)
 
-### BMP
+Script per la manipolazione dei file BMP tramite interfaccia grafica.
+
+| File                        | Descrizione                                         |
+| --------------------------- | --------------------------------------------------- |
+| `script/bmplab/bmplab.swift` | Interfaccia per modificare pixel, profondità colore, dimensioni e header del BMP |
+
+### JPEGlab (Swift)
+
+Script per la manipolazione dei file JPEG tramite interfaccia grafica.
+
+| File                         | Descrizione                                                     |
+| ---------------------------- | --------------------------------------------------------------- |
+| `script/jpeglab/jpeglab.swift` | Interfaccia per modificare SOS, SOF, DQT, DHT e header del JPEG |
+
+### GIFlab (Swift)
+
+Script per la manipolazione dei file GIF tramite interfaccia grafica.
+
+| File                         | Descrizione                                                       |
+| ---------------------------- | ----------------------------------------------------------------- |
+| `script/giflab/giflab.swift`  | Interfaccia per modificare Global Color Table, Local Color Table e Image Data |
+
+### Script Python (legacy)
+
+Script Python per la manipolazione da terminale.
+
+**BMP**
 
 | Script              | Descrizione                                                      |
 | ------------------- | ---------------------------------------------------------------- |
@@ -40,7 +149,7 @@ Gli script contenuti nella cartella `script/` permettono di sperimentare diverse
 | `distorsioni.py`    | Applica distorsione, phaser, tremolo, wahwah e vocoder           |
 | `amp_norm.py`       | Amplifica e normalizza il segnale                                |
 
-### JPEG
+**JPEG**
 
 | Script     | Descrizione                                                   |
 | ---------- | ------------------------------------------------------------- |
@@ -49,7 +158,7 @@ Gli script contenuti nella cartella `script/` permettono di sperimentare diverse
 | `x_dqt.py` | Modifica le tabelle di quantizzazione DQT                     |
 | `x_dht.py` | Modifica le tabelle Huffman DHT                               |
 
-### GIF
+**GIF**
 
 | Script     | Descrizione                                     |
 | ---------- | ----------------------------------------------- |
@@ -85,7 +194,18 @@ sudo apt install sox
 
 ## Utilizzo
 
-Gli script possono essere eseguiti da terminale.
+### Script Swift
+
+Gli script Swift devono essere compilati prima dell'uso:
+
+```bash
+swiftc bmplab.swift -o bmplab
+./bmplab percorso/file.bmp
+```
+
+### Script Python
+
+Gli script Python possono essere eseguiti da terminale.
 
 Esempio: databending BMP con SoX:
 
@@ -140,13 +260,15 @@ Tra i file utilizzati:
 
 ## Schede
 
-La cartella `schede/` contiene le singole schede delle tecniche di glitch in formato PDF, pensate per essere consultate, estratte e stampate.
+Le cartelle `formati/` e `strumenti/` contengono le schede tecniche in formato PDF, pensate per essere consultate, estratte e stampate.
 
 ---
 
 ## Procedure
 
-La cartella `procedure/` contiene la documentazione delle procedure utilizzate per la manipolazione dei diversi formati di file.
+Le cartelle `glitch_*` contengono le procedure dettagliate per la manipolazione dei diversi formati di file.
+
+Ogni procedura è corredata da una cartella `output/` con le immagini di esempio, numerate progressivamente per facilitare il confronto.
 
 Le procedure descrivono i passaggi necessari per replicare gli esperimenti e ottenere i diversi risultati.
 
